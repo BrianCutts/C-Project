@@ -20,15 +20,15 @@ int main() {
 
 	FILE *inFilePtr;// pointer for opening file to be read
 
-	/*char *inFileName = (char *)malloc(sizeof(char) * 50); // string to hold input file name
+	char *inFileName = (char *)malloc(sizeof(char) * 50); // string to hold input file name
 
 	printf("Input File Name to be read:\n");
 
 	fgets(inFileName, 50, stdin);
 
 	inFileName[strcspn(inFileName, "\n")] = ' ';//removes the new line character from file name input to the console*/
-
-	fopen_s(&inFilePtr, "Pi_03Ra.dat", "r"); // try to open a file (MSVC)
+	
+	fopen_s(&inFilePtr, inFilename, "r"); // try to open a file (MSVC)
 
 	if (inFilePtr == NULL)             // if open was unsuccessful
 	{
